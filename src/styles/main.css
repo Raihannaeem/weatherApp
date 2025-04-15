@@ -1,0 +1,107 @@
+.current{
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.11);
+    color: black;
+    border-radius: 5px;
+    margin: auto;
+    width: 700px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 10px;
+    margin-top: 30px;
+}
+
+#mainImg{
+    width: 200px;
+}
+
+.temp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+#myVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+ }
+ 
+ .title{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title *{
+    padding: 0;
+    margin: 0;
+}
+
+.forecast{
+    background-color: rgba(0, 0, 0, 0.11);
+    margin: auto;
+    margin-top: 30px;
+    width: 700px;
+    padding: 10px 10px;
+}
+
+.sunRise{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sunRise img{
+    padding: 5px 0px 10px 0px;
+    width: 40px;
+}
+
+.forecastElement{
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    padding: 5px 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 10px;
+}
+
+.forecastElement > img{
+    width: 70px;
+    margin: 0;
+}
+
+.forecastElement:hover{
+    background-color: #cacaca;
+    scale: 1.025;
+    transition: ease-in-out;
+    transition-duration: 200ms;
+}
+
+/**********MEDIA QUERY FOR MOBILE PHONES***********/
+
+@media(max-width: 850px){
+    .current, .forecast{
+        width: 80%;
+    }
+    #mainImg{
+        width: 40%;
+        padding: 20px;
+    }
+}
