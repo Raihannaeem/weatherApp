@@ -64,6 +64,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: fit-content;
 }
 
 .sunRise img{
@@ -90,8 +91,7 @@
 .forecastElement:hover{
     background-color: #cacaca;
     scale: 1.025;
-    transition: ease-in-out;
-    transition-duration: 200ms;
+    transition-duration: 100ms;
 }
 
 /**********MEDIA QUERY FOR MOBILE PHONES***********/
@@ -104,4 +104,31 @@
         width: 40%;
         padding: 20px;
     }
+    .forecastElement{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .forecastElement > img{
+        width: 50px;
+    }
+    .dayTemp{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-width: 80px;
+        align-items: center;
+    }
+    .dayTemp h2{
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .dayTemp p{
+        font-size: 15px;
+    }
+
+    .sunRise{
+        scale:0.8;
+    }
+
 }

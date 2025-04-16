@@ -13,8 +13,10 @@ function ForecastEle({item}){
     return(
         <div className="forecastElement">
             <img src={getIcon(item.weather[0].icon)[0]}/>
-            <h2>{date.getDate()!=now.getDate() ? days[date.getDay()]: 'Today'}</h2>
-            <p>{Math.floor(item.temp.max-273)}<sup>o</sup>C | {Math.floor(item.temp.min-273)}<sup>o</sup>C</p>
+            <div className="dayTemp">
+                <h2>{date.getDate()!=now.getDate() ? days[date.getDay()]: 'Today'}</h2>
+                <p>{Math.floor(item.temp.max-273)}<sup>o</sup>C | {Math.floor(item.temp.min-273)}<sup>o</sup>C</p>
+            </div>
             <div className="sunRise">
                 <img src={sunRise} />
                 <p>{sunriseTime.getHours()}:{sunriseTime.getMinutes()<10?0:''}{sunriseTime.getMinutes()} PM</p>
